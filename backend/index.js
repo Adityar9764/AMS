@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import attendanceRoutes from './routes/attendanceRoutes.js';
 import studentRoutes from './routes/studentRoutes.js';  
+import leaveRoutes from './routes/leaveRoutes.js';
 import cors from 'cors';
 
 dotenv.config();
@@ -27,6 +28,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/students', studentRoutes);
 // app.use('/api/user', userRoutes);
+app.use('/api/leaves', leaveRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
