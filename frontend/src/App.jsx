@@ -1,10 +1,10 @@
-// frontend/src/App.jsx
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import FaceDetection from './pages/FaceDetection';
-import AddUser from './pages/AddUser';
+import AddStudent from './pages/AddStudent';
 import LeaveDetails from './pages/LeaveDetails';
 import AttendanceRecord from './pages/AttendanceRecord';
 import Navbar from './components/Navbar';
@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/face-detection" element={<ProtectedRoute><FaceDetection /></ProtectedRoute>} />
-        <Route path="/add-user" element={<ProtectedRoute><AddUser /></ProtectedRoute>} />
+        <Route path="/add-student" element={<ProtectedRoute><AddStudent /></ProtectedRoute>} />
         <Route path="/leave-details" element={<ProtectedRoute><LeaveDetails /></ProtectedRoute>} />
         <Route path="/attendance-record" element={<ProtectedRoute><AttendanceRecord /></ProtectedRoute>} />
       </Routes>

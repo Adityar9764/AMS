@@ -1,21 +1,21 @@
 // backend/models/Attendance.js
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const attendanceSchema = new mongoose.Schema({
-  user: {
+  student: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",   // References the User model
+    ref: 'Student',
     required: true,
   },
   status: {
     type: String,
-    enum: ["Present", "Absent", "Late"],  // Define attendance status options
+    enum: ['Present', 'Absent'],
     required: true,
   },
   date: {
     type: Date,
-    default: Date.now,   // Defaults to the current date if not specified
+    required: true,
   },
 });
 
-export default mongoose.model("Attendance", attendanceSchema);
+export default mongoose.model('Attendance', attendanceSchema);
